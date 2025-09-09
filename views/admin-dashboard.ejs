@@ -1,0 +1,45 @@
+<%- include("partials/header") %>
+
+<h2>Admin Dashboard</h2>
+
+<a href="/admin/logout" class="btn btn-danger mb-3">Logout</a>
+
+<h3>Add New Item</h3>
+<form method="POST" action="/admin/add" class="mb-4">
+  <input type="text" name="name" placeholder="Name" required class="form-control mb-2">
+  <select name="category" class="form-control mb-2" required>
+    <option value="dish">Dish</option>
+    <option value="drink">Drink</option>
+    <option value="dessert">Dessert</option>
+    <option value="extra">Extra</option>
+  </select>
+  <input type="number" name="price" placeholder="Price" required class="form-control mb-2">
+  <textarea name="description" placeholder="Description" class="form-control mb-2"></textarea>
+  <button class="btn btn-success">Add Item</button>
+</form>
+
+<h3>All Menu Items</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th><th>Category</th><th>Price</th><th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% items.forEach(item => { %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.category %></td>
+        <td>$<%= item.price %></td>
+        <td>
+          <a href="/admin/edit/<%= item._id %>" class="btn btn-warning btn-sm">Edit</a>
+          <form method="POST" action="/admin/delete/<%= item._id %>" style="display:inline;">
+            <button class="btn btn-danger btn-sm">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<%- include("partials/footer") %>

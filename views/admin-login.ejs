@@ -1,0 +1,39 @@
+<%- include("partials/header") %>
+
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+  <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%; border-radius: 20px;">
+    <div class="text-center mb-4">
+      <i class="bi bi-shield-lock" style="font-size: 3rem; color: #ffb703;"></i>
+      <h3 class="mt-2">Admin Login</h3>
+      <p class="text-muted">Please enter your credentials</p>
+    </div>
+
+    <% if (error) { %>
+      <div class="alert alert-danger text-center"><%= error %></div>
+    <% } %>
+
+    <form method="POST" action="/admin/login">
+      <div class="mb-3">
+        <label class="form-label fw-bold">Username</label>
+        <div class="input-group">
+          <span class="input-group-text bg-white"><i class="bi bi-person"></i></span>
+          <input type="text" name="username" class="form-control" placeholder="Enter username" required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">Password</label>
+        <div class="input-group">
+          <span class="input-group-text bg-white"><i class="bi bi-lock"></i></span>
+          <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+        </div>
+      </div>
+
+      <button class="btn w-100" style="background:#ffb703; color:black; font-weight:bold; border-radius:30px;">
+        <i class="bi bi-box-arrow-in-right"></i> Login
+      </button>
+    </form>
+  </div>
+</div>
+
+<%- include("partials/footer") %>

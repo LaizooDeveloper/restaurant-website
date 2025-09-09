@@ -1,0 +1,122 @@
+/* General Reset */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0, 0, 0, 0.8) !important;
+  transition: background 0.3s ease;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #ffb703 !important;
+}
+
+.nav-link {
+  color: #f1f1f1 !important;
+  margin-left: 10px;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #ffb703 !important;
+}
+
+/* Hero Section (Home Page) */
+.hero {
+  height: 80vh;
+  background: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1, .hero p, .hero a {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero a {
+  padding: 10px 25px;
+  background: #ffb703;
+  color: black;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero a:hover {
+  background: #fb8500;
+  color: white;
+}
+
+/* Menu Cards */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+}
+
+.card-body h5 {
+  font-weight: bold;
+  color: #023047;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Admin Dashboard */
+.table {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn {
+  border-radius: 30px;
+  padding: 6px 18px;
+}
+
+/* Footer */
+footer {
+  background: #023047;
+  color: white;
+  font-size: 0.9rem;
+}

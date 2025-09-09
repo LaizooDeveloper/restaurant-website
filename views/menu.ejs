@@ -1,0 +1,91 @@
+<%- include("partials/header") %>
+
+<div class="container py-5">
+  <h1 class="text-center mb-5 fw-bold">🍴 Our Menu</h1>
+
+  <!-- Dishes -->
+  <section class="mb-5">
+    <h3 class="mb-4 border-bottom pb-2">🍽️ Dishes</h3>
+    <div class="row g-3">
+      <% dishes.forEach(item => { %>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm h-100 " style="background-color: rgb(243, 200, 119);">
+            <% if (item.image) { %>
+              <img src="<%= item.image %>" class="card-img-top" alt="<%= item.name %>" style="height:160px; object-fit:cover;">
+            <% } %>
+            <div class="card-body p-2 text-center">
+              <h6 class="fw-bold mb-1"><%= item.name %></h6>
+              <p class="small  mb-1"><%= item.description %></p>
+              <p class="text-light btn btn-success mb-0">$<%= item.price %></p>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+
+  <!-- Drinks -->
+  <section class="mb-5">
+    <h3 class="mb-4 border-bottom pb-2">🥤 Drinks</h3>
+    <div class="row g-3">
+      <% drinks.forEach(item => { %>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm h-100" style="background-color: rgb(119, 193, 243);">
+            <% if (item.image) { %>
+              <img src="<%= item.image %>" class="card-img-top" alt="<%= item.name %>" style="height:160px; object-fit:cover;">
+            <% } %>
+            <div class="card-body p-2 text-center">
+              <h6 class="fw-bold mb-1"><%= item.name %></h6>
+              <p class="small text-muted mb-1"><%= item.description %></p>
+              <p class="text-light fw-bold btn btn-success mb-0">$<%= item.price %></p>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+
+  <!-- Desserts -->
+  <section class="mb-5">
+    <h3 class="mb-4 border-bottom pb-2">🍰 Desserts</h3>
+    <div class="row g-3">
+      <% desserts.forEach(item => { %>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm h-100" style="background-color: rgb(231, 139, 139);">
+            <% if (item.image) { %>
+              <img src="<%= item.image %>" class="card-img-top" alt="<%= item.name %>" style="height:160px; object-fit:cover;">
+            <% } %>
+            <div class="card-body p-2 text-center">
+              <h6 class="fw-bold mb-1"><%= item.name %></h6>
+              <p class="small text-muted mb-1"><%= item.description %></p>
+              <p class="text-light fw-bold btn btn-success mb-0">$<%= item.price %></p>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+
+  <!-- Extras -->
+  <section class="mb-5">
+    <h3 class="mb-4 border-bottom pb-2">➕ Extras</h3>
+    <div class="row g-3">
+      <% extras.forEach(item => { %>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm h-100" style="background-color: rgb(190, 172, 255);">
+            <% if (item.image) { %>
+              <img src="<%= item.image %>" class="card-img-top" alt="<%= item.name %>" style="height:160px; object-fit:cover;">
+            <% } %>
+            <div class="card-body p-2 text-center">
+              <h6 class="fw-bold mb-1"><%= item.name %></h6>
+              <p class="small text-muted mb-1"><%= item.description %></p>
+              <p class="text-light fw-bold btn btn-success mb-0">$<%= item.price %></p>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+</div>
+
+<%- include("partials/footer") %>
