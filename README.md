@@ -47,5 +47,6 @@ npm i express ejs express-session mongoose
 
 4. npm start
 The app will run on 👉 http://localhost:5000
+```
 
 ---
