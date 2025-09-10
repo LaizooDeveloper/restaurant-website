@@ -27,8 +27,8 @@ The website allows customers to explore the restaurant’s menu (dishes, drinks,
 
 ## 📄 License
 
-This project is licensed under the MIT License.
-💡 Made with ❤️ using Node.js + MongoDB
+- This project is licensed under the MIT License.
+- 💡 Made with ❤️ using Node.js + MongoDB
 
 ---
 
