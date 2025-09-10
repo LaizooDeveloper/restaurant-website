@@ -1,36 +1,26 @@
-# 💰 Debt Manager Web App
+# 🍽️ restaurant-website
 
-A modern and responsive **Debt Management System** built with **Node.js, Express, MongoDB, and EJS**.  
-This application allows users to **record, manage, and track debts** in a simple yet powerful interface.
+A modern and responsive **restaurant website** built with **Node.js, Express.js, MongoDB, and EJS**.  
+The website allows customers to explore the restaurant’s menu (dishes, drinks, desserts, extras) and provides an **admin dashboard** to manage menu items securely.
+
 
 ---
 
 ## 🚀 Features
-- 📝 Add, edit, and delete debts.
-- 👤 Track debtors and creditors with details.
-- 📊 Dashboard with organized debt list.
-- 🎨 Modern and responsive UI with custom CSS.
-- 🔒 Secure data storage in MongoDB.
+- 🏠 **Home Page** – About the restaurant and its story.  
+- 📖 **Menu Page** – Display dishes, drinks, desserts, and extras with modern UI.  
+- 🔑 **Admin Panel** – Secure login system with session authentication.  
+  - Add, edit, or delete menu items.  
+  - Manage categories easily.  
 
 ---
 
 ## 🛠️ Tech Stack
-- **Backend**: Node.js, Express.js
-- **Frontend**: EJS (Embedded JavaScript Templates), Bootstrap 5, Custom CSS
-- **Database**: MongoDB
-- **Other**: Mongoose, Body-parser
-
----
-
-## 📂 Project Structure
-📦 debt-manager
-┣ 📂 public # Static files (CSS, JS, Images)
-┣ 📂 views # EJS templates (pages)
-┣ 📂 models # Mongoose schemas
-┣ 📂 routes # Express routes
-┣ 📜 server.js # Main entry point
-┗ 📜 package.json
-
+- **Node.js** + **Express.js**
+- **MongoDB** + **Mongoose**
+- **EJS** Templating Engine
+- **Bootstrap 5** for design
+- **express-session** for authentication
 
 ---
 
@@ -46,7 +36,7 @@ This project is licensed under the MIT License.
 
 ```bash
 1. Clone the repository:
-git clone https://github.com/yourusername/debt-manager.git
+git clone https://github.com/LaizooDeveloper/restaurant-website.git
 cd debt-manager
 
 2. Install dependencies:
